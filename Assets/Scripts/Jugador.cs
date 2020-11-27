@@ -10,8 +10,8 @@ public class Jugador : MonoBehaviour {
 	public GameObject piesNave;
     private bool piesDesplegados;
 
-    public bool propulsorActivado; 
-	
+    public bool propulsorActivado;
+
 
     public float gas;
     public Text textoGas; //texto combustible
@@ -150,7 +150,7 @@ public class Jugador : MonoBehaviour {
 
             //El movimiento disminuye el combustible
 			gas -= 0.01f;
-			textoGas.text = "Combustible " + Mathf.Round (gas);
+			//textoGas.text = "Combustible " + Mathf.Round (gas);
 		}
 	}
 
