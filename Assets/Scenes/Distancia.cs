@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class Distancia : MonoBehaviour
 {
@@ -19,14 +20,15 @@ public class Distancia : MonoBehaviour
     void Update()
     {
 
-        Transform lanTarget = Lander.transform;
-        Transform lanOTarget = LanderObjective.transform;
+        /*Transform lanTarget = Lander.transform;
+        Transform lanOTarget = LanderObjective.transform;*/
 
-        distancia_ = Vector2.Distance(lanTarget.position/*Lander.transform.position*/, lanOTarget.position/*LanderObjective.transform.position*/);
+        distancia_ = Vector2.Distance(/*lanTarget.position*/Lander.transform.position, /*lanOTarget.position*/LanderObjective.transform.position);
         setDistance();
     }
     void setDistance()
     {
-        TextDistancia.text = distancia_.ToString();
+        int distancia_entero = (int) Math.Round(distancia_);
+        TextDistancia.text = distancia_entero.ToString();
     }
 }

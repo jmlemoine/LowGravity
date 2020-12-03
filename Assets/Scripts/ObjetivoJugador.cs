@@ -21,7 +21,9 @@ public class ObjetivoJugador : MonoBehaviour {
 		if (contraerPistaAterrizaje == false && contactoHecho == false) {
 			StartCoroutine (EsconderPies());
             if (Application.loadedLevelName == "LunarLanding")
-                SceneManager.LoadScene("LunarLandinglevel2");
+                SceneManager.LoadScene("LunarLanding3");
+			if (Application.loadedLevelName == "LunarLanding3")
+                SceneManager.LoadScene("LunarLanding2");
 
 
 

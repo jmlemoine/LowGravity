@@ -45,7 +45,14 @@ public class Jugador : MonoBehaviour {
        
 
 		jugadorRB = GetComponent<Rigidbody2D> ();
-        gas = 15;
+		if (Application.loadedLevelName == "LunarLanding3") 
+		{
+			gas = 10;
+		}
+		else {
+			gas = 15;
+		}
+        
 		objetivoNave = GameObject.Find ("LanderObjective");
 		unionPies = transform.Find ("LanderFeet").GetComponent<HingeJoint2D>();
 		botonReinicio = GameObject.Find ("RestartButton").GetComponent<Button> ();
@@ -150,7 +157,7 @@ public class Jugador : MonoBehaviour {
 
             //El movimiento disminuye el combustible
 			gas -= 0.01f;
-			//textoGas.text = "Combustible " + Mathf.Round (gas);
+			textoGas.text = "Combustible " + Mathf.Round (gas);
 		}
 	}
 
